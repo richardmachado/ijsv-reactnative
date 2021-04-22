@@ -7,7 +7,7 @@ import { ScrollView, View, Text, Picker } from "react-native";
 
 import { styles } from "./styles/bibleStyles";
 
-const API_KEY = "4ff44bf1d0mshb58109f3c94d09ep13f9adjsn37028a25638a";
+const API_KEY = 
 
 function EnglishNewTestament() {
   const [forms, setForms] = useState([]);

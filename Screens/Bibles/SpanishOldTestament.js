@@ -29,7 +29,7 @@ export default function SpanishOldTestament() {
   };
   const options = {
     headers: {
-      "Api-key": "59fc91093130021fbd5e3439e270c4b2",
+      "Api-key": 
     },
   };
 
