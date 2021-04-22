@@ -1,0 +1,29 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"D:\\\\Lambda\\\\PersonalProjects\\\\ijsv-reactnative\\\\ijsv\\\\Screens\\\\BiblesScreen.js\";\nimport React from \"react\";\nimport View from \"react-native-web/dist/exports/View\";\nimport Text from \"react-native-web/dist/exports/Text\";\nimport Button from \"react-native-web/dist/exports/Button\";\nimport StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nimport { styles } from \"./Bibles/styles/bibleStyles\";\nexport default function BiblesScreen(_ref) {\n  var navigation = _ref.navigation;\n  return React.createElement(View, {\n    style: {\n      flex: 1,\n      alignItems: \"center\",\n      justifyContent: \"center\"\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 8,\n      columnNumber: 5\n    }\n  }, React.createElement(Text, {\n    style: styles.headers,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 9,\n      columnNumber: 7\n    }\n  }, \"Pick your desired bible\"), React.createElement(View, {\n    style: styles.button,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 10,\n      columnNumber: 7\n    }\n  }, React.createElement(Button, {\n    marginBottom: \"100\",\n    title: \"Old Testament\",\n    onPress: function onPress() {\n      return navigation.push(\"EnglishOldTestament\");\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 11,\n      columnNumber: 7\n    }\n  })), React.createElement(Button, {\n    title: \"New Testament\",\n    onPress: function onPress() {\n      return navigation.push(\"EnglishNewTestament\");\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 17,\n      columnNumber: 7\n    }\n  }), React.createElement(Button, {\n    title: \"Antiguo Testamento\",\n    onPress: function onPress() {\n      return navigation.push(\"Spanish Old Testament\");\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 21,\n      columnNumber: 7\n    }\n  }), React.createElement(Button, {\n    title: \"Nuevo Testamento\",\n    onPress: function onPress() {\n      return navigation.push(\"SpanishNewTestament\");\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 25,\n      columnNumber: 7\n    }\n  }), React.createElement(Button, {\n    color: \"black\",\n    title: \"Go back\",\n    onPress: function onPress() {\n      return navigation.goBack();\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 30,\n      columnNumber: 7\n    }\n  }));\n}",
+  "map": {
+    "version": 3,
+    "sources": [
+      "D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/Screens/BiblesScreen.js"
+    ],
+    "names": [
+      "React",
+      "styles",
+      "BiblesScreen",
+      "navigation",
+      "flex",
+      "alignItems",
+      "justifyContent",
+      "headers",
+      "button",
+      "push",
+      "goBack"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;;;;AAGA,SAASC,MAAT;AAEA,eAAe,SAASC,YAAT,OAAsC;AAAA,MAAdC,UAAc,QAAdA,UAAc;AACnD,SACE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAE;AAAEC,MAAAA,IAAI,EAAE,CAAR;AAAWC,MAAAA,UAAU,EAAE,QAAvB;AAAiCC,MAAAA,cAAc,EAAE;AAAjD,KAAb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEL,MAAM,CAACM,OAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,+BADF,EAEE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEN,MAAM,CAACO,MAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACA,oBAAC,MAAD;AACC,IAAA,YAAY,EAAC,KADd;AAEE,IAAA,KAAK,EAAC,eAFR;AAGE,IAAA,OAAO,EAAE;AAAA,aAAML,UAAU,CAACM,IAAX,CAAgB,qBAAhB,CAAN;AAAA,KAHX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADA,CAFF,EASE,oBAAC,MAAD;AACE,IAAA,KAAK,EAAC,eADR;AAEE,IAAA,OAAO,EAAE;AAAA,aAAMN,UAAU,CAACM,IAAX,CAAgB,qBAAhB,CAAN;AAAA,KAFX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IATF,EAaE,oBAAC,MAAD;AACE,IAAA,KAAK,EAAC,oBADR;AAEE,IAAA,OAAO,EAAE;AAAA,aAAMN,UAAU,CAACM,IAAX,CAAgB,uBAAhB,CAAN;AAAA,KAFX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAbF,EAiBE,oBAAC,MAAD;AACE,IAAA,KAAK,EAAC,kBADR;AAEE,IAAA,OAAO,EAAE;AAAA,aAAMN,UAAU,CAACM,IAAX,CAAgB,qBAAhB,CAAN;AAAA,KAFX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAjBF,EAsBE,oBAAC,MAAD;AACE,IAAA,KAAK,EAAC,OADR;AAEE,IAAA,KAAK,EAAC,SAFR;AAGE,IAAA,OAAO,EAAE;AAAA,aAAMN,UAAU,CAACO,MAAX,EAAN;AAAA,KAHX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAtBF,CADF;AA8BD",
+    "sourcesContent": [
+      "import React from \"react\";\nimport { View, Text, Button, StyleSheet } from \"react-native\";\n\nimport { styles } from './Bibles/styles/bibleStyles';\n\nexport default function BiblesScreen({ navigation }) {\n  return (\n    <View style={{ flex: 1, alignItems: \"center\", justifyContent: \"center\" }}>\n      <Text style={styles.headers}>Pick your desired bible</Text>\n      <View style={styles.button}>\n      <Button\n       marginBottom=\"100\"\n        title=\"Old Testament\"\n        onPress={() => navigation.push(\"EnglishOldTestament\")}\n        />\n        </View>\n      <Button\n        title=\"New Testament\"\n        onPress={() => navigation.push(\"EnglishNewTestament\")}\n      />\n      <Button\n        title=\"Antiguo Testamento\"\n        onPress={() => navigation.push(\"Spanish Old Testament\")}\n      />\n      <Button\n        title=\"Nuevo Testamento\"\n        onPress={() => navigation.push(\"SpanishNewTestament\")}\n      />\n\n      <Button\n        color=\"black\"\n        title=\"Go back\"\n        onPress={() => navigation.goBack()}\n      />\n    </View>\n  );\n}\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

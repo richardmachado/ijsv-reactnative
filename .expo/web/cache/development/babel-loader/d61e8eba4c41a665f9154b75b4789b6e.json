@@ -1,0 +1,32 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"D:\\\\Lambda\\\\PersonalProjects\\\\ijsv-reactnative\\\\ijsv\\\\App.js\";\nimport * as React from \"react\";\nimport Button from \"react-native-web/dist/exports/Button\";\nimport View from \"react-native-web/dist/exports/View\";\nimport Text from \"react-native-web/dist/exports/Text\";\nimport Image from \"react-native-web/dist/exports/Image\";\nimport { NavigationContainer } from \"@react-navigation/native\";\nimport { createStackNavigator } from \"@react-navigation/stack\";\nimport Temas from \"./Screens/Temas\";\nimport DetailsScreen from \"./Screens/Details\";\n\nfunction HomeScreen(_ref) {\n  var navigation = _ref.navigation;\n  return React.createElement(View, {\n    style: {\n      flex: 1,\n      alignItems: \"center\",\n      justifyContent: \"center\"\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 11,\n      columnNumber: 5\n    }\n  }, React.createElement(Image, {\n    style: {\n      width: 325,\n      height: 325\n    },\n    source: {\n      uri: \"https://ijsv.netlify.app/static/media/logo.9d4984e3.jpg\"\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 12,\n      columnNumber: 7\n    }\n  }), React.createElement(Button, {\n    title: \"Go to Details\",\n    onPress: function onPress() {\n      return navigation.navigate(\"Details\");\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 16,\n      columnNumber: 7\n    }\n  }), React.createElement(Button, {\n    title: \"Go to Temas\",\n    onPress: function onPress() {\n      return navigation.navigate(\"Temas\");\n    },\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 20,\n      columnNumber: 7\n    }\n  }));\n}\n\nvar Stack = createStackNavigator();\n\nfunction App() {\n  return React.createElement(NavigationContainer, {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 32,\n      columnNumber: 5\n    }\n  }, React.createElement(Stack.Navigator, {\n    initialRouteName: \"Home\",\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 33,\n      columnNumber: 7\n    }\n  }, React.createElement(Stack.Screen, {\n    name: \"Home\",\n    component: HomeScreen,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 34,\n      columnNumber: 9\n    }\n  }), React.createElement(Stack.Screen, {\n    name: \"Details\",\n    component: DetailsScreen,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 35,\n      columnNumber: 9\n    }\n  }), React.createElement(Stack.Screen, {\n    name: \"Temas\",\n    component: Temas,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 36,\n      columnNumber: 9\n    }\n  })));\n}\n\nexport default App;",
+  "map": {
+    "version": 3,
+    "sources": ["D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/App.js"],
+    "names": [
+      "React",
+      "NavigationContainer",
+      "createStackNavigator",
+      "Temas",
+      "DetailsScreen",
+      "HomeScreen",
+      "navigation",
+      "flex",
+      "alignItems",
+      "justifyContent",
+      "width",
+      "height",
+      "uri",
+      "navigate",
+      "Stack",
+      "App"
+    ],
+    "mappings": ";AAAA,OAAO,KAAKA,KAAZ,MAAuB,OAAvB;;;;;AAEA,SAASC,mBAAT,QAAoC,0BAApC;AACA,SAASC,oBAAT,QAAqC,yBAArC;AAEA,OAAOC,KAAP;AACA,OAAOC,aAAP;;AAEA,SAASC,UAAT,OAAoC;AAAA,MAAdC,UAAc,QAAdA,UAAc;AAClC,SACE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAE;AAAEC,MAAAA,IAAI,EAAE,CAAR;AAAWC,MAAAA,UAAU,EAAE,QAAvB;AAAiCC,MAAAA,cAAc,EAAE;AAAjD,KAAb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,KAAD;AAAO,IAAA,KAAK,EAAE;AAAKC,MAAAA,KAAK,EAAE,GAAZ;AAChBC,MAAAA,MAAM,EAAE;AADQ,KAAd;AACY,IAAA,MAAM,EAAE;AAAEC,MAAAA,GAAG,EAAE;AAAP,KADpB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAKE,oBAAC,MAAD;AACE,IAAA,KAAK,EAAC,eADR;AAEE,IAAA,OAAO,EAAE;AAAA,aAAMN,UAAU,CAACO,QAAX,CAAoB,SAApB,CAAN;AAAA,KAFX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IALF,EASE,oBAAC,MAAD;AACE,IAAA,KAAK,EAAC,aADR;AAEE,IAAA,OAAO,EAAE;AAAA,aAAMP,UAAU,CAACO,QAAX,CAAoB,OAApB,CAAN;AAAA,KAFX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IATF,CADF;AAgBD;;AAED,IAAMC,KAAK,GAAGZ,oBAAoB,EAAlC;;AAEA,SAASa,GAAT,GAAe;AACb,SACE,oBAAC,mBAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,KAAD,CAAO,SAAP;AAAiB,IAAA,gBAAgB,EAAC,MAAlC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,KAAD,CAAO,MAAP;AAAc,IAAA,IAAI,EAAC,MAAnB;AAA0B,IAAA,SAAS,EAAEV,UAArC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAEE,oBAAC,KAAD,CAAO,MAAP;AAAc,IAAA,IAAI,EAAC,SAAnB;AAA6B,IAAA,SAAS,EAAED,aAAxC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAFF,EAGE,oBAAC,KAAD,CAAO,MAAP;AAAc,IAAA,IAAI,EAAC,OAAnB;AAA2B,IAAA,SAAS,EAAED,KAAtC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAHF,CADF,CADF;AASD;;AAED,eAAeY,GAAf",
+    "sourcesContent": [
+      "import * as React from \"react\";\nimport { Button, View, Text, Image } from \"react-native\";\nimport { NavigationContainer } from \"@react-navigation/native\";\nimport { createStackNavigator } from \"@react-navigation/stack\";\n\nimport Temas from \"./Screens/Temas\";\nimport DetailsScreen from \"./Screens/Details\";\n\nfunction HomeScreen({ navigation }) {\n  return (\n    <View style={{ flex: 1, alignItems: \"center\", justifyContent: \"center\" }}>\n      <Image style={{    width: 325,\n    height: 325,}}source={{ uri: \"https://ijsv.netlify.app/static/media/logo.9d4984e3.jpg\" }} />\n     \n\n      <Button\n        title=\"Go to Details\"\n        onPress={() => navigation.navigate(\"Details\")}\n      />\n      <Button\n        title=\"Go to Temas\"\n        onPress={() => navigation.navigate(\"Temas\")}\n      />\n    </View>\n  );\n}\n\nconst Stack = createStackNavigator();\n\nfunction App() {\n  return (\n    <NavigationContainer>\n      <Stack.Navigator initialRouteName=\"Home\">\n        <Stack.Screen name=\"Home\" component={HomeScreen} />\n        <Stack.Screen name=\"Details\" component={DetailsScreen} />\n        <Stack.Screen name=\"Temas\" component={Temas} />\n      </Stack.Navigator>\n    </NavigationContainer>\n  );\n}\n\nexport default App;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
