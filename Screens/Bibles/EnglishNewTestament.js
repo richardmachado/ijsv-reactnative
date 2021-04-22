@@ -7,7 +7,7 @@ import { ScrollView, View, Text, Picker } from "react-native";
 
 import { styles } from "./styles/bibleStyles";
 
-const API_KEY = process.env.REACT_APP_ENGLISH;
+import { REACT_APP_ENGLISH} from "@env";
 
 function EnglishNewTestament() {
   const [forms, setForms] = useState([]);
@@ -25,7 +25,7 @@ function EnglishNewTestament() {
 
   const options = {
     headers: {
-      "x-rapidapi-key": API_KEY,
+      "x-rapidapi-key": REACT_APP_ENGLISH,
       "x-rapidapi-host": "ajith-holy-bible.p.rapidapi.com",
       useQueryString: "true",
     },
@@ -63,6 +63,7 @@ function EnglishNewTestament() {
       <View style={styles.mainview}>
         <Picker
           style={styles.bookpicker}
+      
           name="book"
           onChange={(e) => {
             handleSubmit(e);
@@ -70,7 +71,7 @@ function EnglishNewTestament() {
           form="book"
         >
           {newtestamentbooks.map(({ value, label }) => (
-            <Picker.Item label={label} value={value}>
+            <Picker.Item label={label} value={value} key={label}>
               {label}
             </Picker.Item>
           ))}
@@ -100,7 +101,7 @@ function EnglishNewTestament() {
         {forms.map((chapterinfo) => {
           return (
             <View key={chapterinfo}>
-              <br></br>
+          
               {processData().map((data2) => (
                 <>
                   <p>{data2}</p>

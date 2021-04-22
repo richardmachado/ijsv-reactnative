@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import _ from "lodash";
 
+import { REACT_APP_SPANISH } from "@env";
+
 import { ScrollView, View, Text, Picker } from "react-native";
 
 import { spanish_books_new_testament } from "./books/bible_books_spanish_new_testament";
@@ -28,9 +30,10 @@ export default function SpanishNewTestament() {
   };
   const options = {
     headers: {
-      "Api-key": process.env.REACT_APP_SPANISH,
+      "Api-key": REACT_APP_SPANISH
     },
   };
+  console.log(options)
 
   useEffect(() => {
     axios

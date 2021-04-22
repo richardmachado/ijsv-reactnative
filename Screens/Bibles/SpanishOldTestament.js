@@ -8,8 +8,9 @@ import { spanish_books_old_testament } from "./books/bible_books_spanish_old_tes
 
 import { styles } from "./styles/bibleStyles";
 
-const API_KEY = process.env.REACT_APP_SPANISH;
-console.log(API_KEY)
+import { REACT_APP_SPANISH } from "@env";
+
+
 
 export default function SpanishOldTestament() {
   const [selectedValue, setSelectedValue] = useState();
@@ -35,7 +36,7 @@ export default function SpanishOldTestament() {
 
   const options = {
     headers: {
-      "Api-key": API_KEY,
+      "Api-key": REACT_APP_SPANISH
     },
   };
 
