@@ -8,6 +8,9 @@ import { spanish_books_old_testament } from "./books/bible_books_spanish_old_tes
 
 import { styles } from "./styles/bibleStyles";
 
+const API_KEY = process.env.REACT_APP_SPANISH;
+console.log(API_KEY)
+
 export default function SpanishOldTestament() {
   const [selectedValue, setSelectedValue] = useState();
   const [numberChapters, setNumberChapters] = useState([]);
@@ -27,16 +30,19 @@ export default function SpanishOldTestament() {
   const handleSubmit = (e) => {
     setBook(e.target.value);
   };
+
+ 
+
   const options = {
     headers: {
-      "Api-key": 
+      "Api-key": API_KEY,
     },
   };
 
   useEffect(() => {
     axios
       .get(
-        `https://api.scripture.api.bible/v1/bibles/592420522e16049f-01/chapters/${book}.${chapter}`,
+        `https://api.scripture.api.bible/v1/bibles/592420522e16049f-01/chapters/${book}.${chapter}?`,
         options
       )
       .then((response) => {

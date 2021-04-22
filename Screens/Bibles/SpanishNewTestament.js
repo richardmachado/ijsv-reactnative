@@ -28,7 +28,7 @@ export default function SpanishNewTestament() {
   };
   const options = {
     headers: {
-      "Api-key": 
+      "Api-key": process.env.REACT_APP_SPANISH,
     },
   };
 

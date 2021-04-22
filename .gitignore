@@ -12,4 +12,5 @@ npm-debug.*
 # macOS
 .DS_Store
 
+# api keys
 .env

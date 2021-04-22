@@ -7,7 +7,7 @@ import { ScrollView, View, Text, Picker } from "react-native";
 
 import { styles } from "./styles/bibleStyles";
 
-const API_KEY = 
+const API_KEY = process.env.REACT_APP_ENGLISH;
 
 function OldTestament() {
   const [forms, setForms] = useState([]);
