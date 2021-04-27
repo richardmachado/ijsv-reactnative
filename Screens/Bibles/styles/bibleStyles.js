@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: 25,
     marginRight: 25,
+    minHeight:300
   },
   bookpicker: {
     height: 50,

@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import axios from "axios";
 import _ from "lodash";
+import DropDownPicker from 'react-native-dropdown-picker';
 
-import { ScrollView, View, Text, Picker } from "react-native";
+
+import { ScrollView, View, Text } from "react-native";
 
 import { spanish_books_old_testament } from "./books/bible_books_spanish_old_testament";
 
 import { styles } from "./styles/bibleStyles";
 
 import { REACT_APP_SPANISH } from "@env";
-
-
 
 export default function SpanishOldTestament() {
   const [selectedValue, setSelectedValue] = useState();
@@ -20,16 +20,19 @@ export default function SpanishOldTestament() {
   const [forms, setForms] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
+
+
   function stripHTML(text) {
     return text.replace(/<.*?>/gm, " ");
   }
 
   const handleChange = (event) => {
-    setChapter(event.target.value);
+    setChapter(event);
   };
 
   const handleSubmit = (e) => {
-    setBook(e.target.value);
+    setBook(e);
+
   };
 
  
@@ -66,7 +69,7 @@ export default function SpanishOldTestament() {
   return (
     <ScrollView>
       <View style={styles.mainview}>
-        <Picker
+        {/* <Text
           name="book"
           selectedValue={selectedValue}
           value={selectedValue}
@@ -75,11 +78,11 @@ export default function SpanishOldTestament() {
           form="book"
         >
           {spanish_books_old_testament.map(({ value, label }) => (
-            <Picker.Item label={label} value={value} key={value} />
+            <Text label={label} value={value} key={value} />
           ))}
-        </Picker>
+        </Text>
 
-        <Picker
+        <Text
           name="chapter"
           selectedValue={selectedValue}
           style={styles.chapterpicker}
@@ -87,7 +90,7 @@ export default function SpanishOldTestament() {
           form="chapter"
         >
           {_.range(1, numberChapters + 1).map((chapters) => (
-            <Picker.Item
+            <Text 
               key={chapters}
               label={chapters}
               value={chapters}
@@ -96,7 +99,31 @@ export default function SpanishOldTestament() {
               }}
             />
           ))}
-        </Picker>
+        </Text> */}
+
+        <DropDownPicker
+        
+    items={[
+        {label: 'Genesis', value: 'GEN'},
+        {label: 'Exodus', value: 'EXO'},
+
+    ]}
+    dropDownStyle={{marginTop: 2, backgroundColor:"skyblue"}}
+          containerStyle={{ height: 40 }}
+    onChangeItem={item => handleSubmit(item.value)}
+/>
+
+<DropDownPicker
+        
+        items={[
+            {label: '1', value: '1'},
+            {label: '2', value: '2'},
+    
+        ]}
+        dropDownStyle={{marginTop: 2, backgroundColor:"skyblue"}}
+              containerStyle={{ height: 40 }}
+        onChangeItem={item => handleChange(item.value)}
+    />
 
         {forms.map((chapterinfo) => {
           return (
