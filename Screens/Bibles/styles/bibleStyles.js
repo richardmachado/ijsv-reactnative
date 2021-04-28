@@ -8,6 +8,11 @@ export const styles = StyleSheet.create({
     marginRight: 25,
     minHeight:300
   },
+  info: {
+    marginTop: 15,
+    marginBottom:15
+
+  },
   bookpicker: {
     height: 50,
     width: 150,

@@ -20,6 +20,21 @@ export default function SpanishOldTestament() {
   const [forms, setForms] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
+  const mapBooks = spanish_books_old_testament.map((option) => ({
+    label: option.label,
+    value: option.value,
+    
+  }
+  ));
+ 
+
+  const mapChapterObject = _.range(1, numberChapters+1).map((option) => ({
+      label: `${option}`,
+      value: `${option}`
+    })
+ 
+  
+  );
 
 
   function stripHTML(text) {
@@ -35,7 +50,6 @@ export default function SpanishOldTestament() {
 
   };
 
- 
 
   const options = {
     headers: {
@@ -51,7 +65,6 @@ export default function SpanishOldTestament() {
       )
       .then((response) => {
         setForms([response.data.data]);
-        // console.log(response.data)
         setLoading(true);
       })
       .catch((err) => {
@@ -69,59 +82,25 @@ export default function SpanishOldTestament() {
   return (
     <ScrollView>
       <View style={styles.mainview}>
-        {/* <Text
-          name="book"
-          selectedValue={selectedValue}
-          value={selectedValue}
-          style={styles.bookpicker}
-          onChange={(e) => handleSubmit(e)}
-          form="book"
-        >
-          {spanish_books_old_testament.map(({ value, label }) => (
-            <Text label={label} value={value} key={value} />
-          ))}
-        </Text>
-
-        <Text
-          name="chapter"
-          selectedValue={selectedValue}
-          style={styles.chapterpicker}
-          onChange={(event) => handleChange(event)}
-          form="chapter"
-        >
-          {_.range(1, numberChapters + 1).map((chapters) => (
-            <Text 
-              key={chapters}
-              label={chapters}
-              value={chapters}
-              onChange={(e) => {
-                setChapter(e.target.value);
-              }}
-            />
-          ))}
-        </Text> */}
+        <View style={styles.info}>
+          <Text>{book} {chapter}</Text>
+        </View>
 
         <DropDownPicker
-        
-    items={[
-        {label: 'Genesis', value: 'GEN'},
-        {label: 'Exodus', value: 'EXO'},
+          items={mapBooks}
 
-    ]}
+    defaultIndex={0}
     dropDownStyle={{marginTop: 2, backgroundColor:"skyblue"}}
-          containerStyle={{ height: 40 }}
+    containerStyle={{ height: 40 }}
     onChangeItem={item => handleSubmit(item.value)}
 />
 
-<DropDownPicker
         
-        items={[
-            {label: '1', value: '1'},
-            {label: '2', value: '2'},
-    
-        ]}
+<DropDownPicker
+        items={mapChapterObject}
+        defaultIndex={0}
         dropDownStyle={{marginTop: 2, backgroundColor:"skyblue"}}
-              containerStyle={{ height: 40 }}
+        containerStyle={{ height: 40 }}
         onChangeItem={item => handleChange(item.value)}
     />
 
