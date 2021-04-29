@@ -1,1 +1,30 @@
-{"ast":null,"code":"import React from\"react\";import View from\"react-native-web/dist/exports/View\";import Button from\"react-native-web/dist/exports/Button\";import Image from\"react-native-web/dist/exports/Image\";export default function HomeScreen(_ref){var navigation=_ref.navigation;return React.createElement(View,{style:{flex:1,alignItems:\"center\",justifyContent:\"center\"}},React.createElement(Image,{style:{width:375,height:325},source:{uri:\"https://ijsv.netlify.app/static/media/logo.9d4984e3.jpg\"}}),React.createElement(View,{style:{marginBottom:30,marginTop:20}},React.createElement(Button,{title:\"Bibles\",onPress:function onPress(){return navigation.navigate(\"Bibles\");}})),React.createElement(View,null,React.createElement(Button,{title:\"Temas\",onPress:function onPress(){return navigation.navigate(\"Temas\");}})));}","map":{"version":3,"sources":["D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/Screens/HomeScreen.js"],"names":["React","HomeScreen","navigation","flex","alignItems","justifyContent","width","height","uri","marginBottom","marginTop","navigate"],"mappings":"AAAA,MAAOA,CAAAA,KAAP,KAAkB,OAAlB,C,qKAGA,cAAe,SAASC,CAAAA,UAAT,MAAoC,IAAdC,CAAAA,UAAc,MAAdA,UAAc,CACjD,MACE,qBAAC,IAAD,EAAM,KAAK,CAAE,CAAEC,IAAI,CAAE,CAAR,CAAWC,UAAU,CAAE,QAAvB,CAAiCC,cAAc,CAAE,QAAjD,CAAb,EACE,oBAAC,KAAD,EACE,KAAK,CAAE,CAAEC,KAAK,CAAE,GAAT,CAAcC,MAAM,CAAE,GAAtB,CADT,CAEE,MAAM,CAAE,CACNC,GAAG,CAAE,yDADC,CAFV,EADF,CAOE,oBAAC,IAAD,EAAM,KAAK,CAAE,CAAEC,YAAY,CAAE,EAAhB,CAAoBC,SAAS,CAAE,EAA/B,CAAb,EACE,oBAAC,MAAD,EAAQ,KAAK,CAAC,QAAd,CAAuB,OAAO,CAAE,yBAAMR,CAAAA,UAAU,CAACS,QAAX,CAAoB,QAApB,CAAN,EAAhC,EADF,CAPF,CAUE,oBAAC,IAAD,MACE,oBAAC,MAAD,EAAQ,KAAK,CAAC,OAAd,CAAsB,OAAO,CAAE,yBAAMT,CAAAA,UAAU,CAACS,QAAX,CAAoB,OAApB,CAAN,EAA/B,EADF,CAVF,CADF,CAgBD","sourcesContent":["import React from \"react\";\nimport { View, Button, Image } from \"react-native\";\n\nexport default function HomeScreen({ navigation }) {\n  return (\n    <View style={{ flex: 1, alignItems: \"center\", justifyContent: \"center\" }}>\n      <Image\n        style={{ width: 375, height: 325 }}\n        source={{\n          uri: \"https://ijsv.netlify.app/static/media/logo.9d4984e3.jpg\",\n        }}\n      />\n      <View style={{ marginBottom: 30, marginTop: 20 }}>\n        <Button title=\"Bibles\" onPress={() => navigation.navigate(\"Bibles\")} />\n      </View>\n      <View>\n        <Button title=\"Temas\" onPress={() => navigation.navigate(\"Temas\")} />\n      </View>\n    </View>\n  );\n}\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import React from\"react\";import View from\"react-native-web/dist/exports/View\";import Button from\"react-native-web/dist/exports/Button\";import Image from\"react-native-web/dist/exports/Image\";export default function HomeScreen(_ref){var navigation=_ref.navigation;return React.createElement(View,{style:{flex:1,alignItems:\"center\",justifyContent:\"center\"}},React.createElement(Image,{style:{width:375,height:325},source:{uri:\"https://ijsv.netlify.app/static/media/logo.9d4984e3.jpg\"}}),React.createElement(View,{style:{marginBottom:30,marginTop:20}},React.createElement(Button,{title:\"Bibles\",onPress:function onPress(){return navigation.navigate(\"Bibles\");}})),React.createElement(View,null,React.createElement(Button,{title:\"Temas\",onPress:function onPress(){return navigation.navigate(\"Temas\");}})));}",
+  "map": {
+    "version": 3,
+    "sources": [
+      "D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/Screens/HomeScreen.js"
+    ],
+    "names": [
+      "React",
+      "HomeScreen",
+      "navigation",
+      "flex",
+      "alignItems",
+      "justifyContent",
+      "width",
+      "height",
+      "uri",
+      "marginBottom",
+      "marginTop",
+      "navigate"
+    ],
+    "mappings": "AAAA,MAAOA,CAAAA,KAAP,KAAkB,OAAlB,C,qKAGA,cAAe,SAASC,CAAAA,UAAT,MAAoC,IAAdC,CAAAA,UAAc,MAAdA,UAAc,CACjD,MACE,qBAAC,IAAD,EAAM,KAAK,CAAE,CAAEC,IAAI,CAAE,CAAR,CAAWC,UAAU,CAAE,QAAvB,CAAiCC,cAAc,CAAE,QAAjD,CAAb,EACE,oBAAC,KAAD,EACE,KAAK,CAAE,CAAEC,KAAK,CAAE,GAAT,CAAcC,MAAM,CAAE,GAAtB,CADT,CAEE,MAAM,CAAE,CACNC,GAAG,CAAE,yDADC,CAFV,EADF,CAOE,oBAAC,IAAD,EAAM,KAAK,CAAE,CAAEC,YAAY,CAAE,EAAhB,CAAoBC,SAAS,CAAE,EAA/B,CAAb,EACE,oBAAC,MAAD,EAAQ,KAAK,CAAC,QAAd,CAAuB,OAAO,CAAE,yBAAMR,CAAAA,UAAU,CAACS,QAAX,CAAoB,QAApB,CAAN,EAAhC,EADF,CAPF,CAUE,oBAAC,IAAD,MACE,oBAAC,MAAD,EAAQ,KAAK,CAAC,OAAd,CAAsB,OAAO,CAAE,yBAAMT,CAAAA,UAAU,CAACS,QAAX,CAAoB,OAApB,CAAN,EAA/B,EADF,CAVF,CADF,CAgBD",
+    "sourcesContent": [
+      "import React from \"react\";\nimport { View, Button, Image } from \"react-native\";\n\nexport default function HomeScreen({ navigation }) {\n  return (\n    <View style={{ flex: 1, alignItems: \"center\", justifyContent: \"center\" }}>\n      <Image\n        style={{ width: 375, height: 325 }}\n        source={{\n          uri: \"https://ijsv.netlify.app/static/media/logo.9d4984e3.jpg\",\n        }}\n      />\n      <View style={{ marginBottom: 30, marginTop: 20 }}>\n        <Button title=\"Bibles\" onPress={() => navigation.navigate(\"Bibles\")} />\n      </View>\n      <View>\n        <Button title=\"Temas\" onPress={() => navigation.navigate(\"Temas\")} />\n      </View>\n    </View>\n  );\n}\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { ScrollView, View, Text } from "react-native";
 import axios from "axios";
 import _ from "lodash";
+import DropDownPicker from "react-native-dropdown-picker";
 import { oldtestamentbooks } from "./books/bible_books_oldtestament";
-
-import { ScrollView, View, Text, Picker } from "react-native";
 
 import { styles } from "./styles/bibleStyles";
 
-import { REACT_APP_ENGLISH} from "@env";
+import { REACT_APP_ENGLISH } from "@env";
 
 function OldTestament() {
   const [forms, setForms] = useState([]);
@@ -15,12 +15,24 @@ function OldTestament() {
   const [book, setBook] = useState("GENESIS");
   const [numberChapters, setNumberChapters] = useState([]);
 
+  const mapOldEnglishChapters = _.range(1, numberChapters + 1).map(
+    (option) => ({
+      label: `${option}`,
+      value: `${option}`,
+    })
+  );
+
+  const mapNewEnglishChapters = oldtestamentbooks.map((option) => ({
+    label: option.label,
+    value: option.value,
+  }));
+
   const handleChange = (event) => {
-    setChapter(event.target.value);
+    setChapter(event);
   };
 
   const handleSubmit = (e) => {
-    setBook(e.target.value);
+    setBook(e);
   };
 
   const options = {
@@ -61,49 +73,36 @@ function OldTestament() {
   return (
     <ScrollView>
       <View style={styles.mainview}>
-        <Picker
-          name="book"
-          style={styles.bookpicker}
-          onChange={(e) => {
-            handleSubmit(e);
-          }}
-          form="book"
-        >
-          {oldtestamentbooks.map(({ value, label }) => (
-            <Picker.Item key={label} label={label} value={value}>
-              {label}
-            </Picker.Item>
-          ))}
-        </Picker>
+        <View style={styles.info}>
+          <Text>
+            {book} {chapter}
+          </Text>
+        </View>
+        <View style={styles.pickers}>
+          <DropDownPicker
+            items={mapNewEnglishChapters}
+            defaultIndex={0}
+            placeholder="Book"
+            dropDownStyle={{ marginTop: 2, backgroundColor: "skyblue" }}
+            containerStyle={{ height: 40, width: 190, height: 70 }}
+            onChangeItem={(item) => handleSubmit(item.value)}
+          />
 
-        <Picker
-          name="chapter"
-          type="text"
-          onChange={(event) => handleChange(event)}
-          style={styles.chapterpicker}
-          form="chapter"
-        >
-          {_.range(1, numberChapters + 1).map((value) => (
-            <Picker.Item
-              key={value}
-              value={value}
-              label={value}
-              onChange={(e) => {
-                setChapter(e.target.value);
-              }}
-            >
-              {value}
-            </Picker.Item>
-          ))}
-        </Picker>
-
+          <DropDownPicker
+            items={mapOldEnglishChapters}
+            defaultIndex={0}
+            placeholder="Chapter"
+            dropDownStyle={{ marginTop: 2, backgroundColor: "skyblue" }}
+            containerStyle={{ height: 40, width: 110, height: 70 }}
+            onChangeItem={(item) => handleChange(item.value)}
+          />
+        </View>
         {forms.map((chapterinfo) => {
           return (
             <View key={chapterinfo}>
-          
               {processData().map((data2) => (
                 <>
-                  <p>{data2}</p>
+                  <Text>{data2}</Text>
                 </>
               ))}
             </View>

@@ -1,1 +1,16 @@
-{"ast":null,"code":"var _interopRequireDefault=require(\"@babel/runtime/helpers/interopRequireDefault\");Object.defineProperty(exports,\"__esModule\",{value:true});exports.setRecoveryProps=setRecoveryProps;exports.recoveredProps=void 0;var _ErroRecoveryStore=require(\"./ErroRecoveryStore\");var _ExpoErrorRecovery=_interopRequireDefault(require(\"./ExpoErrorRecovery\"));require(\"./ErrorRecovery.fx\");var recoveredProps=_getRecoveredProps();exports.recoveredProps=recoveredProps;function setRecoveryProps(props){(0,_ErroRecoveryStore.setRecoveryPropsToSave)(props);}function _getRecoveredProps(){if(_ExpoErrorRecovery.default.recoveredProps){return JSON.parse(_ExpoErrorRecovery.default.recoveredProps);}return null;}","map":{"version":3,"sources":["../src/ErrorRecovery.ts"],"names":[],"mappings":"oNAAA,sDACA,8EACA,8BAEO,GAAM,CAAA,cAAc,CAAG,kBAAkB,EAAzC,C,sCAID,QAAU,CAAA,gBAAV,CAA2B,KAA3B,CAAoD,CACxD,8CAAuB,KAAvB,EACD,CAED,QAAS,CAAA,kBAAT,EAA2B,CACzB,GAAI,2BAAkB,cAAtB,CAAsC,CACpC,MAAO,CAAA,IAAI,CAAC,KAAL,CAAW,2BAAkB,cAA7B,CAAP,CACD,CACD,MAAO,KAAP,CACD","sourcesContent":["import { setRecoveryPropsToSave } from './ErroRecoveryStore';\nimport ExpoErrorRecovery from './ExpoErrorRecovery';\nimport './ErrorRecovery.fx';\n\nexport const recoveredProps = _getRecoveredProps();\n\nexport type ErrorRecoveryProps = Record<string, any>;\n\nexport function setRecoveryProps(props: ErrorRecoveryProps): void {\n  setRecoveryPropsToSave(props);\n}\n\nfunction _getRecoveredProps(): ErrorRecoveryProps | null {\n  if (ExpoErrorRecovery.recoveredProps) {\n    return JSON.parse(ExpoErrorRecovery.recoveredProps);\n  }\n  return null;\n}\n"],"sourceRoot":""},"metadata":{},"sourceType":"script"}
+{
+  "ast": null,
+  "code": "var _interopRequireDefault=require(\"@babel/runtime/helpers/interopRequireDefault\");Object.defineProperty(exports,\"__esModule\",{value:true});exports.setRecoveryProps=setRecoveryProps;exports.recoveredProps=void 0;var _ErroRecoveryStore=require(\"./ErroRecoveryStore\");var _ExpoErrorRecovery=_interopRequireDefault(require(\"./ExpoErrorRecovery\"));require(\"./ErrorRecovery.fx\");var recoveredProps=_getRecoveredProps();exports.recoveredProps=recoveredProps;function setRecoveryProps(props){(0,_ErroRecoveryStore.setRecoveryPropsToSave)(props);}function _getRecoveredProps(){if(_ExpoErrorRecovery.default.recoveredProps){return JSON.parse(_ExpoErrorRecovery.default.recoveredProps);}return null;}",
+  "map": {
+    "version": 3,
+    "sources": ["../src/ErrorRecovery.ts"],
+    "names": [],
+    "mappings": "oNAAA,sDACA,8EACA,8BAEO,GAAM,CAAA,cAAc,CAAG,kBAAkB,EAAzC,C,sCAID,QAAU,CAAA,gBAAV,CAA2B,KAA3B,CAAoD,CACxD,8CAAuB,KAAvB,EACD,CAED,QAAS,CAAA,kBAAT,EAA2B,CACzB,GAAI,2BAAkB,cAAtB,CAAsC,CACpC,MAAO,CAAA,IAAI,CAAC,KAAL,CAAW,2BAAkB,cAA7B,CAAP,CACD,CACD,MAAO,KAAP,CACD",
+    "sourcesContent": [
+      "import { setRecoveryPropsToSave } from './ErroRecoveryStore';\nimport ExpoErrorRecovery from './ExpoErrorRecovery';\nimport './ErrorRecovery.fx';\n\nexport const recoveredProps = _getRecoveredProps();\n\nexport type ErrorRecoveryProps = Record<string, any>;\n\nexport function setRecoveryProps(props: ErrorRecoveryProps): void {\n  setRecoveryPropsToSave(props);\n}\n\nfunction _getRecoveredProps(): ErrorRecoveryProps | null {\n  if (ExpoErrorRecovery.recoveredProps) {\n    return JSON.parse(ExpoErrorRecovery.recoveredProps);\n  }\n  return null;\n}\n"
+    ],
+    "sourceRoot": ""
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

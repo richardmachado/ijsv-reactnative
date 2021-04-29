@@ -1,1 +1,35 @@
-{"ast":null,"code":"import StyleSheet from\"react-native-web/dist/exports/StyleSheet\";export var styles=StyleSheet.create({mainview:{flex:1,alignItems:\"center\",marginLeft:25,marginRight:25},bookpicker:{height:50,width:150,marginBottom:20},chapterpicker:{height:50,width:150,marginBottom:30},buttons:{marginBottom:30},headers:{textAlign:\"center\",fontSize:32,marginBottom:20}});","map":{"version":3,"sources":["D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/Screens/Bibles/styles/bibleStyles.js"],"names":["styles","StyleSheet","create","mainview","flex","alignItems","marginLeft","marginRight","bookpicker","height","width","marginBottom","chapterpicker","buttons","headers","textAlign","fontSize"],"mappings":"iEAEA,MAAO,IAAMA,CAAAA,MAAM,CAAGC,UAAU,CAACC,MAAX,CAAkB,CACtCC,QAAQ,CAAE,CACRC,IAAI,CAAE,CADE,CAERC,UAAU,CAAE,QAFJ,CAGRC,UAAU,CAAE,EAHJ,CAIRC,WAAW,CAAE,EAJL,CAD4B,CAOtCC,UAAU,CAAE,CACVC,MAAM,CAAE,EADE,CAEVC,KAAK,CAAE,GAFG,CAGVC,YAAY,CAAE,EAHJ,CAP0B,CAYtCC,aAAa,CAAE,CACbH,MAAM,CAAE,EADK,CAEbC,KAAK,CAAE,GAFM,CAGbC,YAAY,CAAE,EAHD,CAZuB,CAiBtCE,OAAO,CAAE,CACPF,YAAY,CAAE,EADP,CAjB6B,CAoBtCG,OAAO,CAAE,CACPC,SAAS,CAAE,QADJ,CAEPC,QAAQ,CAAE,EAFH,CAGPL,YAAY,CAAE,EAHP,CApB6B,CAAlB,CAAf","sourcesContent":["import { StyleSheet } from \"react-native\";\n\nexport const styles = StyleSheet.create({\n  mainview: {\n    flex: 1,\n    alignItems: \"center\",\n    marginLeft: 25,\n    marginRight: 25,\n  },\n  bookpicker: {\n    height: 50,\n    width: 150,\n    marginBottom: 20,\n  },\n  chapterpicker: {\n    height: 50,\n    width: 150,\n    marginBottom: 30,\n  },\n  buttons: {\n    marginBottom: 30,\n  },\n  headers: {\n    textAlign: \"center\",\n    fontSize: 32,\n    marginBottom: 20,\n  },\n});\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import StyleSheet from\"react-native-web/dist/exports/StyleSheet\";export var styles=StyleSheet.create({mainview:{flex:1,alignItems:\"center\",marginLeft:25,marginRight:25},bookpicker:{height:50,width:150,marginBottom:20},chapterpicker:{height:50,width:150,marginBottom:30},buttons:{marginBottom:30},headers:{textAlign:\"center\",fontSize:32,marginBottom:20}});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/Screens/Bibles/styles/bibleStyles.js"
+    ],
+    "names": [
+      "styles",
+      "StyleSheet",
+      "create",
+      "mainview",
+      "flex",
+      "alignItems",
+      "marginLeft",
+      "marginRight",
+      "bookpicker",
+      "height",
+      "width",
+      "marginBottom",
+      "chapterpicker",
+      "buttons",
+      "headers",
+      "textAlign",
+      "fontSize"
+    ],
+    "mappings": "iEAEA,MAAO,IAAMA,CAAAA,MAAM,CAAGC,UAAU,CAACC,MAAX,CAAkB,CACtCC,QAAQ,CAAE,CACRC,IAAI,CAAE,CADE,CAERC,UAAU,CAAE,QAFJ,CAGRC,UAAU,CAAE,EAHJ,CAIRC,WAAW,CAAE,EAJL,CAD4B,CAOtCC,UAAU,CAAE,CACVC,MAAM,CAAE,EADE,CAEVC,KAAK,CAAE,GAFG,CAGVC,YAAY,CAAE,EAHJ,CAP0B,CAYtCC,aAAa,CAAE,CACbH,MAAM,CAAE,EADK,CAEbC,KAAK,CAAE,GAFM,CAGbC,YAAY,CAAE,EAHD,CAZuB,CAiBtCE,OAAO,CAAE,CACPF,YAAY,CAAE,EADP,CAjB6B,CAoBtCG,OAAO,CAAE,CACPC,SAAS,CAAE,QADJ,CAEPC,QAAQ,CAAE,EAFH,CAGPL,YAAY,CAAE,EAHP,CApB6B,CAAlB,CAAf",
+    "sourcesContent": [
+      "import { StyleSheet } from \"react-native\";\n\nexport const styles = StyleSheet.create({\n  mainview: {\n    flex: 1,\n    alignItems: \"center\",\n    marginLeft: 25,\n    marginRight: 25,\n  },\n  bookpicker: {\n    height: 50,\n    width: 150,\n    marginBottom: 20,\n  },\n  chapterpicker: {\n    height: 50,\n    width: 150,\n    marginBottom: 30,\n  },\n  buttons: {\n    marginBottom: 30,\n  },\n  headers: {\n    textAlign: \"center\",\n    fontSize: 32,\n    marginBottom: 20,\n  },\n});\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -6,12 +6,16 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: 25,
     marginRight: 25,
-    minHeight:300
+    minHeight: 300,
   },
   info: {
     marginTop: 15,
-    marginBottom:15
-
+    marginBottom: 15,
+  },
+  pickers: {
+    flex: 1,
+    flexDirection: "row",
+    marginBottom: 150,
   },
   bookpicker: {
     height: 50,

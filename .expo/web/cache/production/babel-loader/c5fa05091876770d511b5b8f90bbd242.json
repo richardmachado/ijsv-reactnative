@@ -1,1 +1,61 @@
-{"ast":null,"code":"import _slicedToArray from\"@babel/runtime/helpers/slicedToArray\";import React,{useState,useEffect}from\"react\";import axios from\"axios\";import View from\"react-native-web/dist/exports/View\";import Text from\"react-native-web/dist/exports/Text\";import StyleSheet from\"react-native-web/dist/exports/StyleSheet\";import{ScrollView}from\"react-native-gesture-handler\";export default function Temas(){var _useState=useState([]),_useState2=_slicedToArray(_useState,2),temas=_useState2[0],setTemas=_useState2[1];useEffect(function(){axios.get(\"https://ijsv-backend.herokuapp.com/api/temas\").then(function(response){setTemas(response.data);}).catch(function(err){console.log(err);});},[]);if(!temas){return React.createElement(Text,{style:{flex:1,alignItems:\"center\",justifyContent:\"center\"}},\"Loading...\");}return React.createElement(ScrollView,{style:styles.container},React.createElement(View,{style:styles.textBox},temas.map(function(themes){return React.createElement(View,{key:themes.id},React.createElement(Text,{style:styles.title},themes.title),React.createElement(Text,{style:styles.body},themes.body1),React.createElement(Text,{style:styles.body},themes.body2),React.createElement(Text,{style:styles.body},themes.body3));})));}var styles=StyleSheet.create({container:{backgroundColor:\"skyblue\",paddingTop:20,paddingBottom:10},textBox:{flex:1,alignItems:\"center\",justifyContent:\"center\",paddingBottom:25},header:{textAlign:\"center\",fontSize:32,marginBottom:20},title:{fontWeight:\"bold\",fontSize:18,textAlign:\"center\"},body:{textAlign:\"left\",marginTop:5,marginBottom:10,marginLeft:15,marginRight:15}});","map":{"version":3,"sources":["D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/Screens/Temas.js"],"names":["React","useState","useEffect","axios","ScrollView","Temas","temas","setTemas","get","then","response","data","catch","err","console","log","flex","alignItems","justifyContent","styles","container","textBox","map","themes","id","title","body","body1","body2","body3","StyleSheet","create","backgroundColor","paddingTop","paddingBottom","header","textAlign","fontSize","marginBottom","fontWeight","marginTop","marginLeft","marginRight"],"mappings":"iEAAA,MAAOA,CAAAA,KAAP,EAAgBC,QAAhB,CAA0BC,SAA1B,KAA2C,OAA3C,CACA,MAAOC,CAAAA,KAAP,KAAkB,OAAlB,C,2KAEA,OAASC,UAAT,KAA2B,8BAA3B,CAGA,cAAe,SAASC,CAAAA,KAAT,EAAiB,eACJJ,QAAQ,CAAC,EAAD,CADJ,wCACvBK,KADuB,eAChBC,QADgB,eAG9BL,SAAS,CAAC,UAAM,CACdC,KAAK,CACFK,GADH,CACO,8CADP,EAEGC,IAFH,CAEQ,SAACC,QAAD,CAAc,CAClBH,QAAQ,CAACG,QAAQ,CAACC,IAAV,CAAR,CACD,CAJH,EAKGC,KALH,CAKS,SAACC,GAAD,CAAS,CACdC,OAAO,CAACC,GAAR,CAAYF,GAAZ,EACD,CAPH,EAQD,CATQ,CASN,EATM,CAAT,CAUA,GAAI,CAACP,KAAL,CAAY,CACV,MACE,qBAAC,IAAD,EAAM,KAAK,CAAE,CAAEU,IAAI,CAAE,CAAR,CAAWC,UAAU,CAAE,QAAvB,CAAiCC,cAAc,CAAE,QAAjD,CAAb,eADF,CAKD,CAED,MACE,qBAAC,UAAD,EAAY,KAAK,CAAEC,MAAM,CAACC,SAA1B,EACE,oBAAC,IAAD,EAAM,KAAK,CAAED,MAAM,CAACE,OAApB,EACGf,KAAK,CAACgB,GAAN,CAAU,SAACC,MAAD,CAAY,CACrB,MACE,qBAAC,IAAD,EAAM,GAAG,CAAEA,MAAM,CAACC,EAAlB,EACE,oBAAC,IAAD,EAAM,KAAK,CAAEL,MAAM,CAACM,KAApB,EAA4BF,MAAM,CAACE,KAAnC,CADF,CAEE,oBAAC,IAAD,EAAM,KAAK,CAAEN,MAAM,CAACO,IAApB,EAA2BH,MAAM,CAACI,KAAlC,CAFF,CAGE,oBAAC,IAAD,EAAM,KAAK,CAAER,MAAM,CAACO,IAApB,EAA2BH,MAAM,CAACK,KAAlC,CAHF,CAIE,oBAAC,IAAD,EAAM,KAAK,CAAET,MAAM,CAACO,IAApB,EAA2BH,MAAM,CAACM,KAAlC,CAJF,CADF,CAQD,CATA,CADH,CADF,CADF,CAgBD,CAED,GAAMV,CAAAA,MAAM,CAAGW,UAAU,CAACC,MAAX,CAAkB,CAC/BX,SAAS,CAAE,CACTY,eAAe,CAAE,SADR,CAETC,UAAU,CAAE,EAFH,CAGTC,aAAa,CAAE,EAHN,CADoB,CAM/Bb,OAAO,CAAE,CACPL,IAAI,CAAE,CADC,CAEPC,UAAU,CAAE,QAFL,CAGPC,cAAc,CAAE,QAHT,CAIPgB,aAAa,CAAE,EAJR,CANsB,CAY/BC,MAAM,CAAE,CACNC,SAAS,CAAE,QADL,CAENC,QAAQ,CAAE,EAFJ,CAGNC,YAAY,CAAE,EAHR,CAZuB,CAiB/Bb,KAAK,CAAE,CACLc,UAAU,CAAE,MADP,CAELF,QAAQ,CAAE,EAFL,CAGLD,SAAS,CAAE,QAHN,CAjBwB,CAuB/BV,IAAI,CAAE,CACJU,SAAS,CAAE,MADP,CAEJI,SAAS,CAAE,CAFP,CAGJF,YAAY,CAAE,EAHV,CAIJG,UAAU,CAAE,EAJR,CAKJC,WAAW,CAAE,EALT,CAvByB,CAAlB,CAAf","sourcesContent":["import React, { useState, useEffect } from \"react\";\nimport axios from \"axios\";\nimport { View, Text, StyleSheet } from \"react-native\";\nimport { ScrollView } from \"react-native-gesture-handler\";\n// import { SafeAreaView } from \"react-native-safe-area-context\";\n\nexport default function Temas() {\n  const [temas, setTemas] = useState([]);\n\n  useEffect(() => {\n    axios\n      .get(\"https://ijsv-backend.herokuapp.com/api/temas\")\n      .then((response) => {\n        setTemas(response.data);\n      })\n      .catch((err) => {\n        console.log(err);\n      });\n  }, []);\n  if (!temas) {\n    return (\n      <Text style={{ flex: 1, alignItems: \"center\", justifyContent: \"center\" }}>\n        Loading...\n      </Text>\n    );\n  }\n\n  return (\n    <ScrollView style={styles.container}>\n      <View style={styles.textBox}>\n        {temas.map((themes) => {\n          return (\n            <View key={themes.id}>\n              <Text style={styles.title}>{themes.title}</Text>\n              <Text style={styles.body}>{themes.body1}</Text>\n              <Text style={styles.body}>{themes.body2}</Text>\n              <Text style={styles.body}>{themes.body3}</Text>\n            </View>\n          );\n        })}\n      </View>\n    </ScrollView>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    backgroundColor: \"skyblue\",\n    paddingTop: 20,\n    paddingBottom: 10,\n  },\n  textBox: {\n    flex: 1,\n    alignItems: \"center\",\n    justifyContent: \"center\",\n    paddingBottom: 25,\n  },\n  header: {\n    textAlign: \"center\",\n    fontSize: 32,\n    marginBottom: 20,\n  },\n  title: {\n    fontWeight: \"bold\",\n    fontSize: 18,\n    textAlign: \"center\",\n  },\n\n  body: {\n    textAlign: \"left\",\n    marginTop: 5,\n    marginBottom: 10,\n    marginLeft: 15,\n    marginRight: 15,\n  },\n});\n"]},"metadata":{},"sourceType":"module"}
+{
+  "ast": null,
+  "code": "import _slicedToArray from\"@babel/runtime/helpers/slicedToArray\";import React,{useState,useEffect}from\"react\";import axios from\"axios\";import View from\"react-native-web/dist/exports/View\";import Text from\"react-native-web/dist/exports/Text\";import StyleSheet from\"react-native-web/dist/exports/StyleSheet\";import{ScrollView}from\"react-native-gesture-handler\";export default function Temas(){var _useState=useState([]),_useState2=_slicedToArray(_useState,2),temas=_useState2[0],setTemas=_useState2[1];useEffect(function(){axios.get(\"https://ijsv-backend.herokuapp.com/api/temas\").then(function(response){setTemas(response.data);}).catch(function(err){console.log(err);});},[]);if(!temas){return React.createElement(Text,{style:{flex:1,alignItems:\"center\",justifyContent:\"center\"}},\"Loading...\");}return React.createElement(ScrollView,{style:styles.container},React.createElement(View,{style:styles.textBox},temas.map(function(themes){return React.createElement(View,{key:themes.id},React.createElement(Text,{style:styles.title},themes.title),React.createElement(Text,{style:styles.body},themes.body1),React.createElement(Text,{style:styles.body},themes.body2),React.createElement(Text,{style:styles.body},themes.body3));})));}var styles=StyleSheet.create({container:{backgroundColor:\"skyblue\",paddingTop:20,paddingBottom:10},textBox:{flex:1,alignItems:\"center\",justifyContent:\"center\",paddingBottom:25},header:{textAlign:\"center\",fontSize:32,marginBottom:20},title:{fontWeight:\"bold\",fontSize:18,textAlign:\"center\"},body:{textAlign:\"left\",marginTop:5,marginBottom:10,marginLeft:15,marginRight:15}});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "D:/Lambda/PersonalProjects/ijsv-reactnative/ijsv/Screens/Temas.js"
+    ],
+    "names": [
+      "React",
+      "useState",
+      "useEffect",
+      "axios",
+      "ScrollView",
+      "Temas",
+      "temas",
+      "setTemas",
+      "get",
+      "then",
+      "response",
+      "data",
+      "catch",
+      "err",
+      "console",
+      "log",
+      "flex",
+      "alignItems",
+      "justifyContent",
+      "styles",
+      "container",
+      "textBox",
+      "map",
+      "themes",
+      "id",
+      "title",
+      "body",
+      "body1",
+      "body2",
+      "body3",
+      "StyleSheet",
+      "create",
+      "backgroundColor",
+      "paddingTop",
+      "paddingBottom",
+      "header",
+      "textAlign",
+      "fontSize",
+      "marginBottom",
+      "fontWeight",
+      "marginTop",
+      "marginLeft",
+      "marginRight"
+    ],
+    "mappings": "iEAAA,MAAOA,CAAAA,KAAP,EAAgBC,QAAhB,CAA0BC,SAA1B,KAA2C,OAA3C,CACA,MAAOC,CAAAA,KAAP,KAAkB,OAAlB,C,2KAEA,OAASC,UAAT,KAA2B,8BAA3B,CAGA,cAAe,SAASC,CAAAA,KAAT,EAAiB,eACJJ,QAAQ,CAAC,EAAD,CADJ,wCACvBK,KADuB,eAChBC,QADgB,eAG9BL,SAAS,CAAC,UAAM,CACdC,KAAK,CACFK,GADH,CACO,8CADP,EAEGC,IAFH,CAEQ,SAACC,QAAD,CAAc,CAClBH,QAAQ,CAACG,QAAQ,CAACC,IAAV,CAAR,CACD,CAJH,EAKGC,KALH,CAKS,SAACC,GAAD,CAAS,CACdC,OAAO,CAACC,GAAR,CAAYF,GAAZ,EACD,CAPH,EAQD,CATQ,CASN,EATM,CAAT,CAUA,GAAI,CAACP,KAAL,CAAY,CACV,MACE,qBAAC,IAAD,EAAM,KAAK,CAAE,CAAEU,IAAI,CAAE,CAAR,CAAWC,UAAU,CAAE,QAAvB,CAAiCC,cAAc,CAAE,QAAjD,CAAb,eADF,CAKD,CAED,MACE,qBAAC,UAAD,EAAY,KAAK,CAAEC,MAAM,CAACC,SAA1B,EACE,oBAAC,IAAD,EAAM,KAAK,CAAED,MAAM,CAACE,OAApB,EACGf,KAAK,CAACgB,GAAN,CAAU,SAACC,MAAD,CAAY,CACrB,MACE,qBAAC,IAAD,EAAM,GAAG,CAAEA,MAAM,CAACC,EAAlB,EACE,oBAAC,IAAD,EAAM,KAAK,CAAEL,MAAM,CAACM,KAApB,EAA4BF,MAAM,CAACE,KAAnC,CADF,CAEE,oBAAC,IAAD,EAAM,KAAK,CAAEN,MAAM,CAACO,IAApB,EAA2BH,MAAM,CAACI,KAAlC,CAFF,CAGE,oBAAC,IAAD,EAAM,KAAK,CAAER,MAAM,CAACO,IAApB,EAA2BH,MAAM,CAACK,KAAlC,CAHF,CAIE,oBAAC,IAAD,EAAM,KAAK,CAAET,MAAM,CAACO,IAApB,EAA2BH,MAAM,CAACM,KAAlC,CAJF,CADF,CAQD,CATA,CADH,CADF,CADF,CAgBD,CAED,GAAMV,CAAAA,MAAM,CAAGW,UAAU,CAACC,MAAX,CAAkB,CAC/BX,SAAS,CAAE,CACTY,eAAe,CAAE,SADR,CAETC,UAAU,CAAE,EAFH,CAGTC,aAAa,CAAE,EAHN,CADoB,CAM/Bb,OAAO,CAAE,CACPL,IAAI,CAAE,CADC,CAEPC,UAAU,CAAE,QAFL,CAGPC,cAAc,CAAE,QAHT,CAIPgB,aAAa,CAAE,EAJR,CANsB,CAY/BC,MAAM,CAAE,CACNC,SAAS,CAAE,QADL,CAENC,QAAQ,CAAE,EAFJ,CAGNC,YAAY,CAAE,EAHR,CAZuB,CAiB/Bb,KAAK,CAAE,CACLc,UAAU,CAAE,MADP,CAELF,QAAQ,CAAE,EAFL,CAGLD,SAAS,CAAE,QAHN,CAjBwB,CAuB/BV,IAAI,CAAE,CACJU,SAAS,CAAE,MADP,CAEJI,SAAS,CAAE,CAFP,CAGJF,YAAY,CAAE,EAHV,CAIJG,UAAU,CAAE,EAJR,CAKJC,WAAW,CAAE,EALT,CAvByB,CAAlB,CAAf",
+    "sourcesContent": [
+      "import React, { useState, useEffect } from \"react\";\nimport axios from \"axios\";\nimport { View, Text, StyleSheet } from \"react-native\";\nimport { ScrollView } from \"react-native-gesture-handler\";\n// import { SafeAreaView } from \"react-native-safe-area-context\";\n\nexport default function Temas() {\n  const [temas, setTemas] = useState([]);\n\n  useEffect(() => {\n    axios\n      .get(\"https://ijsv-backend.herokuapp.com/api/temas\")\n      .then((response) => {\n        setTemas(response.data);\n      })\n      .catch((err) => {\n        console.log(err);\n      });\n  }, []);\n  if (!temas) {\n    return (\n      <Text style={{ flex: 1, alignItems: \"center\", justifyContent: \"center\" }}>\n        Loading...\n      </Text>\n    );\n  }\n\n  return (\n    <ScrollView style={styles.container}>\n      <View style={styles.textBox}>\n        {temas.map((themes) => {\n          return (\n            <View key={themes.id}>\n              <Text style={styles.title}>{themes.title}</Text>\n              <Text style={styles.body}>{themes.body1}</Text>\n              <Text style={styles.body}>{themes.body2}</Text>\n              <Text style={styles.body}>{themes.body3}</Text>\n            </View>\n          );\n        })}\n      </View>\n    </ScrollView>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    backgroundColor: \"skyblue\",\n    paddingTop: 20,\n    paddingBottom: 10,\n  },\n  textBox: {\n    flex: 1,\n    alignItems: \"center\",\n    justifyContent: \"center\",\n    paddingBottom: 25,\n  },\n  header: {\n    textAlign: \"center\",\n    fontSize: 32,\n    marginBottom: 20,\n  },\n  title: {\n    fontWeight: \"bold\",\n    fontSize: 18,\n    textAlign: \"center\",\n  },\n\n  body: {\n    textAlign: \"left\",\n    marginTop: 5,\n    marginBottom: 10,\n    marginLeft: 15,\n    marginRight: 15,\n  },\n});\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

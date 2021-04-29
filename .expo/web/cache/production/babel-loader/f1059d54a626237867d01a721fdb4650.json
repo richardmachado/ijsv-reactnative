@@ -1,1 +1,17 @@
-{"ast":null,"code":"var _interopRequireDefault=require(\"@babel/runtime/helpers/interopRequireDefault\");var _registerRootComponent=_interopRequireDefault(require(\"expo/build/launch/registerRootComponent\"));var _App=_interopRequireDefault(require(\"../../App\"));(0,_registerRootComponent.default)(_App.default);","map":{"version":3,"sources":["D:/Lambda/PersonalProjects/ijsv-reactnative/node_modules/expo/AppEntry.js"],"names":["App"],"mappings":"mFAAA,sGAEA,sDAEA,mCAAsBA,YAAtB","sourcesContent":["import registerRootComponent from 'expo/build/launch/registerRootComponent';\n\nimport App from '../../App';\n\nregisterRootComponent(App);\n"]},"metadata":{},"sourceType":"script"}
+{
+  "ast": null,
+  "code": "var _interopRequireDefault=require(\"@babel/runtime/helpers/interopRequireDefault\");var _registerRootComponent=_interopRequireDefault(require(\"expo/build/launch/registerRootComponent\"));var _App=_interopRequireDefault(require(\"../../App\"));(0,_registerRootComponent.default)(_App.default);",
+  "map": {
+    "version": 3,
+    "sources": [
+      "D:/Lambda/PersonalProjects/ijsv-reactnative/node_modules/expo/AppEntry.js"
+    ],
+    "names": ["App"],
+    "mappings": "mFAAA,sGAEA,sDAEA,mCAAsBA,YAAtB",
+    "sourcesContent": [
+      "import registerRootComponent from 'expo/build/launch/registerRootComponent';\n\nimport App from '../../App';\n\nregisterRootComponent(App);\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

@@ -1,49 +1,60 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import _ from "lodash";
+import DropDownPicker from "react-native-dropdown-picker";
+
+import { ScrollView, View, Text } from "react-native";
+
+import { spanish_books_new_testament } from "./books/bible_books_spanish_new_testament";
+
+import { styles } from "./styles/bibleStyles";
 
 import { REACT_APP_SPANISH } from "@env";
 
-import { ScrollView, View, Text, Picker } from "react-native";
-
-import { spanish_books_new_testament } from "./books/bible_books_spanish_new_testament";
-import { styles } from "./styles/bibleStyles";
-
 export default function SpanishNewTestament() {
-  const [selectedValue, setSelectedValue] = useState();
   const [numberChapters, setNumberChapters] = useState([]);
   const [chapter, setChapter] = useState(1);
   const [book, setBook] = useState("MAT");
   const [forms, setForms] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
+  const mapNewSpanishChapters = _.range(1, numberChapters + 1).map(
+    (option) => ({
+      label: `${option}`,
+      value: `${option}`,
+    })
+  );
+
+  const mapNewSpanishBooks = spanish_books_new_testament.map((option) => ({
+    label: option.label,
+    value: option.value,
+  }));
+
   function stripHTML(text) {
     return text.replace(/<.*?>/gm, " ");
   }
 
   const handleChange = (event) => {
-    setChapter(event.target.value);
+    setChapter(event);
   };
 
   const handleSubmit = (e) => {
-    setBook(e.target.value);
+    setBook(e);
   };
   const options = {
     headers: {
-      "Api-key": REACT_APP_SPANISH
+      "Api-key": REACT_APP_SPANISH,
     },
   };
-  console.log(options)
 
   useEffect(() => {
     axios
       .get(
-        `https://api.scripture.api.bible/v1/bibles/592420522e16049f-01/chapters/${book}.${chapter}`,
+        `https://api.scripture.api.bible/v1/bibles/592420522e16049f-01/chapters/${book}.${chapter}?`,
         options
       )
       .then((response) => {
         setForms([response.data.data]);
-        // console.log(response.data)
         setLoading(true);
       })
       .catch((err) => {
@@ -61,37 +72,31 @@ export default function SpanishNewTestament() {
   return (
     <ScrollView>
       <View style={styles.mainview}>
-        <Picker
-          name="book"
-          selectedValue={selectedValue}
-          value={selectedValue}
-          style={styles.bookpicker}
-          onChange={(e) => handleSubmit(e)}
-          form="book"
-        >
-          {spanish_books_new_testament.map(({ value, label }) => (
-            <Picker.Item label={label} value={value} key={value} />
-          ))}
-        </Picker>
+        <View style={styles.info}>
+          <Text>
+            {book} {chapter}
+          </Text>
+        </View>
+        <View style={styles.pickers}>
+          <DropDownPicker
+            items={mapNewSpanishBooks}
+            placeholder="Libro"
+            defaultIndex={0}
+            dropDownStyle={{ marginTop: 2, backgroundColor: "skyblue" }}
+            containerStyle={{ height: 40, width: 180, height: 70 }}
+            onChangeItem={(item) => handleSubmit(item.value)}
+          />
 
-        <Picker
-          name="chapter"
-          selectedValue={selectedValue}
-          style={styles.chapterpicker}
-          onChange={(event) => handleChange(event)}
-          form="chapter"
-        >
-          {_.range(1, numberChapters + 1).map((chapters) => (
-            <Picker.Item
-              key={chapters}
-              label={chapters}
-              value={chapters}
-              onChange={(e) => {
-                setChapter(e.target.value);
-              }}
-            />
-          ))}
-        </Picker>
+          <DropDownPicker
+            items={mapNewSpanishChapters}
+            defaultIndex={0}
+            placeholder="Capitulo"
+            dropDownStyle={{ marginTop: 2, backgroundColor: "skyblue" }}
+            containerStyle={{ height: 40, width: 110, height: 70 }}
+            onChangeItem={(item) => handleChange(item.value)}
+          />
+        </View>
+
         {forms.map((chapterinfo) => {
           return (
             <View key={chapterinfo}>

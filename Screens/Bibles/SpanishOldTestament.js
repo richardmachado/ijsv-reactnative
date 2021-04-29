@@ -1,8 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import _ from "lodash";
-import DropDownPicker from 'react-native-dropdown-picker';
-
+import DropDownPicker from "react-native-dropdown-picker";
 
 import { ScrollView, View, Text } from "react-native";
 
@@ -13,29 +12,23 @@ import { styles } from "./styles/bibleStyles";
 import { REACT_APP_SPANISH } from "@env";
 
 export default function SpanishOldTestament() {
-  const [selectedValue, setSelectedValue] = useState();
   const [numberChapters, setNumberChapters] = useState([]);
   const [chapter, setChapter] = useState(1);
   const [book, setBook] = useState("GEN");
   const [forms, setForms] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
-  const mapBooks = spanish_books_old_testament.map((option) => ({
-    label: option.label,
-    value: option.value,
-    
-  }
-  ));
- 
-
-  const mapChapterObject = _.range(1, numberChapters+1).map((option) => ({
+  const mapOldSpanishChapters = _.range(1, numberChapters + 1).map(
+    (option) => ({
       label: `${option}`,
-      value: `${option}`
+      value: `${option}`,
     })
- 
-  
   );
 
+  const mapOldSpanishBooks = spanish_books_old_testament.map((option) => ({
+    label: option.label,
+    value: option.value,
+  }));
 
   function stripHTML(text) {
     return text.replace(/<.*?>/gm, " ");
@@ -47,13 +40,10 @@ export default function SpanishOldTestament() {
 
   const handleSubmit = (e) => {
     setBook(e);
-
   };
-
-
   const options = {
     headers: {
-      "Api-key": REACT_APP_SPANISH
+      "Api-key": REACT_APP_SPANISH,
     },
   };
 
@@ -83,27 +73,30 @@ export default function SpanishOldTestament() {
     <ScrollView>
       <View style={styles.mainview}>
         <View style={styles.info}>
-          <Text>{book} {chapter}</Text>
+          <Text>
+            {book} {chapter}
+          </Text>
         </View>
+        <View style={styles.pickers}>
+          <DropDownPicker
+            style={{ paddingVertical: 10 }}
+            items={mapOldSpanishBooks}
+            defaultIndex={0}
+            placeholder="Libro"
+            dropDownStyle={{ marginTop: 2, backgroundColor: "skyblue" }}
+            containerStyle={{ height: 40, width: 170, height: 70 }}
+            onChangeItem={(item) => handleSubmit(item.value)}
+          />
 
-        <DropDownPicker
-          items={mapBooks}
-
-    defaultIndex={0}
-    dropDownStyle={{marginTop: 2, backgroundColor:"skyblue"}}
-    containerStyle={{ height: 40 }}
-    onChangeItem={item => handleSubmit(item.value)}
-/>
-
-        
-<DropDownPicker
-        items={mapChapterObject}
-        defaultIndex={0}
-        dropDownStyle={{marginTop: 2, backgroundColor:"skyblue"}}
-        containerStyle={{ height: 40 }}
-        onChangeItem={item => handleChange(item.value)}
-    />
-
+          <DropDownPicker
+            items={mapOldSpanishChapters}
+            defaultIndex={0}
+            placeholder="Capitulo"
+            dropDownStyle={{ marginTop: 2, backgroundColor: "skyblue" }}
+            containerStyle={{ height: 40, width: 110, height: 70 }}
+            onChangeItem={(item) => handleChange(item.value)}
+          />
+        </View>
         {forms.map((chapterinfo) => {
           return (
             <View key={chapterinfo}>

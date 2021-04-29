@@ -16,7 +16,7 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Spanish Old Testament">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Temas" component={Temas} />
         <Stack.Screen name="Bibles" component={BiblesScreen} />

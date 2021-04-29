@@ -1,1 +1,16 @@
-{"ast":null,"code":"Object.defineProperty(exports,\"__esModule\",{value:true});exports.canUseViewport=exports.canUseEventListeners=exports.isDOMAvailable=void 0;var _window$document;var isDOMAvailable=typeof window!=='undefined'&&!!((_window$document=window.document)!=null&&_window$document.createElement);exports.isDOMAvailable=isDOMAvailable;var canUseEventListeners=isDOMAvailable&&!!(window.addEventListener||window.attachEvent);exports.canUseEventListeners=canUseEventListeners;var canUseViewport=isDOMAvailable&&!!window.screen;exports.canUseViewport=canUseViewport;","map":{"version":3,"sources":["../../src/environment/browser.web.ts"],"names":[],"mappings":"gKASO,GAAM,CAAA,cAAc,CAAG,MAAO,CAAA,MAAP,GAAkB,WAAlB,EAAiC,CAAC,oBAAC,MAAM,CAAC,QAAR,SAAC,iBAAiB,aAAlB,CAAzD,C,sCACA,GAAM,CAAA,oBAAoB,CAC/B,cAAc,EAAI,CAAC,EAAE,MAAM,CAAC,gBAAP,EAA2B,MAAM,CAAC,WAApC,CADd,C,kDAEA,GAAM,CAAA,cAAc,CAAG,cAAc,EAAI,CAAC,CAAC,MAAM,CAAC,MAAlD,C","sourcesContent":["declare global {\n  // Add IE-specific interface to Window\n  interface Window {\n    attachEvent(event: string, listener: EventListener): boolean;\n  }\n}\n\n// Used for delegating node actions when browser APIs aren't available\n// like in SSR websites.\nexport const isDOMAvailable = typeof window !== 'undefined' && !!window.document?.createElement;\nexport const canUseEventListeners =\n  isDOMAvailable && !!(window.addEventListener || window.attachEvent);\nexport const canUseViewport = isDOMAvailable && !!window.screen;\n"],"sourceRoot":""},"metadata":{},"sourceType":"script"}
+{
+  "ast": null,
+  "code": "Object.defineProperty(exports,\"__esModule\",{value:true});exports.canUseViewport=exports.canUseEventListeners=exports.isDOMAvailable=void 0;var _window$document;var isDOMAvailable=typeof window!=='undefined'&&!!((_window$document=window.document)!=null&&_window$document.createElement);exports.isDOMAvailable=isDOMAvailable;var canUseEventListeners=isDOMAvailable&&!!(window.addEventListener||window.attachEvent);exports.canUseEventListeners=canUseEventListeners;var canUseViewport=isDOMAvailable&&!!window.screen;exports.canUseViewport=canUseViewport;",
+  "map": {
+    "version": 3,
+    "sources": ["../../src/environment/browser.web.ts"],
+    "names": [],
+    "mappings": "gKASO,GAAM,CAAA,cAAc,CAAG,MAAO,CAAA,MAAP,GAAkB,WAAlB,EAAiC,CAAC,oBAAC,MAAM,CAAC,QAAR,SAAC,iBAAiB,aAAlB,CAAzD,C,sCACA,GAAM,CAAA,oBAAoB,CAC/B,cAAc,EAAI,CAAC,EAAE,MAAM,CAAC,gBAAP,EAA2B,MAAM,CAAC,WAApC,CADd,C,kDAEA,GAAM,CAAA,cAAc,CAAG,cAAc,EAAI,CAAC,CAAC,MAAM,CAAC,MAAlD,C",
+    "sourcesContent": [
+      "declare global {\n  // Add IE-specific interface to Window\n  interface Window {\n    attachEvent(event: string, listener: EventListener): boolean;\n  }\n}\n\n// Used for delegating node actions when browser APIs aren't available\n// like in SSR websites.\nexport const isDOMAvailable = typeof window !== 'undefined' && !!window.document?.createElement;\nexport const canUseEventListeners =\n  isDOMAvailable && !!(window.addEventListener || window.attachEvent);\nexport const canUseViewport = isDOMAvailable && !!window.screen;\n"
+    ],
+    "sourceRoot": ""
+  },
+  "metadata": {},
+  "sourceType": "script"
+}
